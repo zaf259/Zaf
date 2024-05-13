@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+/* Circle Animation */
+@keyframes circle-animation {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0;
+  }
+  87% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tokyo Tower Animation */
+/* Base Animation */
+@keyframes base {
+  from {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arch {
+  from {
+    opacity: 0;
+  }
+  4% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes base-spire {
+  from {
+    opacity: 0;
+  }
+  6% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Decks Animation */
+@keyframes main-deck {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes top-deck {
+  from {
+    opacity: 0;
+  }
+  23% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Spire Animation */
+@keyframes spire {
+  from {
+    opacity: 0;
+  }
+  18% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Antenna Animation */
+@keyframes antenna {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  26% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tokyo Text Animation */
+@keyframes tokyo-text {
+  from {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0;
+  }
+  37% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tokyo Tower Neon Sign Image */
+/* Circle */
+.circle {
+  position: absolute;
+  width: 450px;
+  height: 435px;
+  top: 24px;
+  left: 20px;
+  background: black;
+  border: solid 2px white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff4f00, 0 0 15px #f5d8ca, inset 0 0 10px #ff4f00,
+    inset 0 0 10px #ff4f00;
+  animation: circle-animation linear infinite 5s;
+}
+
+/* Tokyo Tower */
+.tokyo-tower {
+  position: absolute;
+  width: 273px;
+  height: 376px;
+  top: 38px;
+  left: 112px;
+}
+
+.antenna {
+  position: absolute;
+  width: 21px;
+  height: 15px;
+  top: 83px;
+  left: 124px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+  animation: antenna linear infinite 5s;
+}
+
+.antenna::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 79px;
+  top: -83px;
+  left: 6px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+}
+
+.antenna::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 33px;
+  top: -49px;
+  left: 3px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+}
+
+.top-deck {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 106px;
+  left: 118px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+  animation: top-deck linear infinite 5s;
+}
+
+.main-deck {
+  position: absolute;
+  width: 93px;
+  height: 34px;
+  top: 222px;
+  left: 88px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+  animation: main-deck linear infinite 5s;
+}
+
+.spire-border {
+  position: absolute;
+  width: 51px;
+  height: 71px;
+  top: 147px;
+  left: 111px;
+  background: white;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.spire-inset {
+  position: absolute;
+  width: 45px;
+  height: 67px;
+  top: 149px;
+  left: 114px;
+  background: #dd6840;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  filter: blur(7px);
+}
+
+.spire {
+  position: absolute;
+  width: 39px;
+  height: 63px;
+  top: 151px;
+  left: 117px;
+  background: black;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  filter: blur(10px);
+}
+
+.spire-shadow {
+  filter: drop-shadow(0 0 7px #ff4f00) drop-shadow(0 0 12px #f5d8ca);
+  animation: spire linear infinite 5s;
+}
+
+.base-spire-border {
+  position: absolute;
+  width: 233px;
+  height: 100px;
+  top: 263px;
+  left: 20px;
+  background: white;
+  clip-path: path("M 0,100 Q 52,70 77,0 L 156,0 Q 181,70 237,102 Z");
+}
+
+.base-spire-inset {
+  position: absolute;
+  width: 233px;
+  height: 100px;
+  top: 263px;
+  left: 20px;
+  background: #ad5b43;
+  clip-path: path("M 8,98 Q 53,70 79,2 L 154,2 Q 180,70 226,98 Z");
+  filter: blur(7px);
+}
+
+.base-spire {
+  position: absolute;
+  width: 233px;
+  height: 100px;
+  top: 263px;
+  left: 20px;
+  background: black;
+  clip-path: path("M 15,96 Q 55,70 81,5 L 152,5 Q 178,70 218,96 Z");
+  filter: blur(15px);
+}
+
+.base-spire-shadow {
+  filter: drop-shadow(0 0 7px #ff4f00) drop-shadow(0 0 12px #f5d8ca);
+  animation: base-spire linear infinite 5s;
+}
+
+.arch {
+  position: absolute;
+  width: 120px;
+  height: 55px;
+  top: 317px;
+  left: 76px;
+  background: black;
+  border: solid 2px white;
+  border-radius: 60px 60px 0px 0px;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+  animation: arch linear infinite 5s;
+}
+
+.base {
+  position: absolute;
+  width: 61px;
+  height: 11px;
+  top: 361px;
+  left: 14px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+  animation: base linear infinite 5s;
+}
+
+.base::before {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 11px;
+  top: -2px;
+  left: 178px;
+  background: black;
+  border: solid 2px white;
+  box-shadow: 0 0 7px #ff4f00, 0 0 12px #f5d8ca, inset 0 0 5px #ff4f00,
+    inset 0 0 6px #f5d8ca;
+}
+
+/* Tokyo Text */
+.tokyo-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 276px;
+  height: 55px;
+  top: 420px;
+  left: 112px;
+  background: black;
+  font-family: "Tilt Neon", sans-serif;
+  color: white;
+  font-size: 56px;
+  text-shadow: 0 0 20px #2c84fb, 0 0 40px #ff4f00, 0 0 100px #85b4f6;
+  border-radius: 5px;
+  animation: tokyo-text linear infinite 5s;
+}
+
+.flicker {
+  animation: flicker linear infinite 5s;
+}
+
+/* Body and Container Settings */
+/* Center shapes */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Set background and border color */
+.container {
+  min-width: 500px;
+  height: 500px;
+  border: 5px solid lightgray;
+  background: black;
+  position: relative;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- Tokyo Tower Neon Sign -->
+        <div class="circle"></div>
+        <div class="tokyo-tower">
+          <div class="antenna"></div>
+          <div class="main-deck"></div>
+          <div class="top-deck"></div>
+          <div class="spire-shadow">
+            <div class="spire-border"></div>
+            <div class="spire-inset"></div>
+            <div class="spire"></div>
+          </div>
+          <div class="base-spire-shadow">
+            <div class="base-spire-border"></div>
+            <div class="base-spire-inset"></div>
+            <div class="base-spire"></div>
+          </div>
+          <div class="arch"></div>
+          <div class="base"></div>
+        </div>
+        <div class="tokyo-text">
+          <span>T</span>
+          <span class="flicker">O</span>
+          <span>K</span>
+          <span>Y</span>
+          <span class="flicker">O</span>
+        </div>
+      </div>
+</body>
+</html>
